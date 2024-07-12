@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Calculator - FLAMES Game</title>
+  <meta
+    name="keywords"
+    content="love calculator, love flames, flames test, flames calculator, love compatibility, love test, love relationship, love test game"
+  />
+  <meta
+    name="description"
+    content="An online Love Calculator to test your relationship compatibility. Test the status of your relationship with your crush/partner based on the FLAMES game."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="shortcut icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link
+    rel="preload"
+    href="./fonts/BioRhyme-Regular-latin.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="./fonts/BioRhyme-Regular-latin_ext.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="./css/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1PCnU90EYBMAHTUQNk1J7Epqi1V5B0TBOaUahF2m+HU8PQzfiwhZ9O2nIoDpXRebHqlfNPRnKsk9A7W5seuN1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./js/app.js"></script>
+  <script>
+    var ga = document.createElement("script");
+    ga.async = true;
+    ga.src="https://www.googletagmanager.com/gtag/js?id=G-GJCHG84XCY";
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag("js", new Date());
+    window.gtag("config", "G-GJCHG84XCY");
+  </script>
+</head>
+<body onload="urlQr();">
+  <div class="container">
+    <section>
+      <p class="title">Flames Calculator</p>
+      <p class="text-center">
+        Do you want to know what type of relationship
+        <span style="color: #c71585">(friendship, love, affection, marriage, enmity, sisterhood)</span> you are going
+        to have with your dream partner?
+      </p>
+    </section>
+    <section id="flames_calc">
+      <p id="fc_heading">Give two names to FLAMES !</p>
+      <form id="flames_form" name="flames_form" onsubmit="return loveCalc();">
+        <input
+          type="text"
+          class="form_control"
+          id="name1"
+          name="yname"
+          placeholder="your name"
+          onkeypress="return validateName(event);"
+          onkeyup="updateURL();onEnter(event);"
+          pattern="[a-zA-Z ]*$"
+          title="Name"
+          autofocus
+          required
+        />
+        <input
+          type="text"
+          class="form_control"
+          id="name2"
+          name="pname"
+          placeholder="your crush name"
+          onkeypress="return validateName(event);"
+          onkeyup="updateURL();onEnter(event);"
+          pattern="[a-zA-Z ]*$"
+          title="Name"
+          required
+        />
+        <div class="button_container">
+          <input id="btnFlames" class="button_r btn btn-danger" type="submit" value="FLAMES" />
+          <input
+            id="btnReset"
+            class="button_r bg_white btn btn-light"
+            type="button"
+            onclick="resetVal();"
+            value="RESET!"
+          />
+        </div>
+      </form>
+      <div id="flames_result" class="text-center" oncontextmenu="return false;">
+        <img id="flames_result_img" src="" alt="flames-result" />
+        <p id="flames_result_text"></p>
+      </div>
+    </section>
+    <section>
+      <p>
+        <span style="color: #c71585; font-weight: 600">Note: </span>“If you’re curious about the love compatibility between you and someone else, try Flames. Simply enter your name and your crush’s name, then click on FLAMES. Remember, the results are just for fun and shouldn’t be taken too seriously.” 😊
+      </p>
+    </section>
+    </div>
+</body>
+</html>

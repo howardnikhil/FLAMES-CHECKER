@@ -1,2 +1,2 @@
-# FLAMES-CHECKER
-If you’re curious about the love compatibility between you and someone else, try Flames. Simply enter your name and your crush’s name, then click on FLAMES. Remember, the results are just for fun and shouldn’t be taken too seriously.” 😊
+# flames-calculator
+Find out what type of relationship (friendship, love, affection, marriage, enmity, sisterhood) you are going to have with your dream partner...
